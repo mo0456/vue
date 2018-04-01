@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-qweqwewqeqweqwe
-123123213213213
-dsffsddsf
-=======
-qweqwewqeqweqwe
->>>>>>> ef40a6c1cc3b4c955b384951070ae6280e568234
