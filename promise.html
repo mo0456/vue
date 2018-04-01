@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+  <title>Document</title>  
+  
+ </head>
+ <body>
+	<script type="text/javascript">
+		let p = new Promise(function(resolve,reject){
+			setTimeout(()=>{
+				let a = 1 +1;
+				reject("数据拿不到")
+			},2000)
+		})
+
+	</script>
+ </body>
+</html>
