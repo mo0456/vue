@@ -1,0 +1,84 @@
+ CD命令是更改目录命令 如果要进入D盘不用这个命令直接输入 D: 回车 即可
+
+ copy 1.txt 2.txt 复制1.txt 新文件名字为：2.txt
+
+ windows下创建文件夹的命令：md 文件夹名称
+ Linux下创建文件夹的命令：mkdir 文件夹名称
+
+ 全局注册用户名和邮箱：
+ git config --global user.name "用户名"
+ git config --global user.email 用户的邮箱
+
+ 查看git下某个命令的帮助信息
+
+ git help config
+
+ nano---命令行文本编辑器
+
+ cygwin---windows下的模拟linux命令
+
+ git add --- 提交到暂存区
+ 让git来跟踪某个文件：git add 文件名   
+ 让git来跟踪多个html文件：git add *.html
+
+ git commit --- 提交到版本库
+ 将跟踪好的文件提交到版本库中：git commit -m "注释信息"
+ 查看提交的日志信息：git log
+
+ git是分布式的版本控制，每个人都有一个版本库，生成版本号，以保证全球唯一
+ svn是集中式版本控制，只有一个版本库
+
+ git下建立并编辑文件的方法：
+ 1、vi aa.html
+ 2、进入编辑状态之后，按i键，开始编辑
+ 3、按esc键退出编辑
+ 4、按shift+！，输入x退出编辑状态，切换到命令行模式
+
+ git add .  添加当前工作目录文件到index
+
+ git add * git会自动把你当前目录所有修改过的文件添加
+ git add . Git会递归地将你执行命令时所在的目录中的所有文件添加上去，
+ 所以如果你将当前的工作目录作为参数，它就会追踪那儿的所有文件
+ 想同步所有的改动不妨试试 git add -A
+
+ git add . ：他会监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，
+ 包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。
+
+git add -u ：他仅监控已经被add的文件（即tracked file），
+他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。
+（git add --update的缩写）
+
+git add -A ：是上面两个功能的合集（git add --all的缩写）
+
+windows使用git时出现：warning: LF will be replaced by CRLF解决办法：
+$ rm -rf .git  // 删除.git  
+$ git config --global core.autocrlf false  //禁用自动转换    
+$ git init    
+$ git add .
+
+git版本控制的原理：本质上是保存文件的快照
+svn原理：保存文件的差异
+
+git branch --- 列出所有分支
+git branch 分支名称 --- 创建分支
+git checkout 分支名
+git branch -d 分支名
+
+
+git checkout -b 分支名称 --- 相当于 git branch 分支名称 与 git checkout 分知名 的命令合并
+
+2018-3-30------------
+
+分支合并产生冲突的原因及解决办法：
+同一个文件的不同地方合并，git会自动合并，不会产生冲突
+原因：两个相同文件的，相同的位置，不同的代码，在合并的时候会产生冲突
+解决办法：
+head代表当前的工作区文件，根据需要，去除产生冲突的注释，
+通过 git add 已解决的冲突文件名称 ， 来标记已解决的冲突文件
+
+git stash:保存当前的分支状态，切换到其他的分支
+git stash list:查看状态列表
+git stash apply 状态列表中的名字
+
+
+
